@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Questurl:</strong>
+  <%= @bb.QuestURL %>
+</p>
+
+<p>
+  <strong>Questname:</strong>
+  <%= @bb.QuestName %>
+</p>
+
+<p>
+  <strong>Questlevel:</strong>
+  <%= @bb.QuestLevel %>
+</p>
+
+<p>
+  <strong>Questmessage:</strong>
+  <%= @bb.QuestMessage %>
+</p>
+
+<%= link_to 'Edit', edit_bb_path(@bb) %> |
+<%= link_to 'Back', bbs_path %>

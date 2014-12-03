@@ -1,0 +1,33 @@
+<%= form_for(@bb) do |f| %>
+  <% if @bb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bb.errors.count, "error") %> prohibited this bb from being saved:</h2>
+
+      <ul>
+      <% @bb.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :QuestURL %><br>
+    <%= f.text_area :QuestURL %>
+  </div>
+  <div class="field">
+    <%= f.label :QuestName %><br>
+    <%= f.text_field :QuestName %>
+  </div>
+  <div class="field">
+    <%= f.label :QuestLevel %><br>
+    <%= f.number_field :QuestLevel %>
+  </div>
+  <div class="field">
+    <%= f.label :QuestMessage %><br>
+    <%= f.text_area :QuestMessage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
